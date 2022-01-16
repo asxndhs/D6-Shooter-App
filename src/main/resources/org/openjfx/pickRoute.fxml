@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<?import javafx.scene.control.RadioButton?>
+<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.GameScreens.PickRoute">
+    <VBox alignment="CENTER" spacing="20.0">
+        <children>
+            <Button fx:id="pauseButton" text="Pause" onAction="#switchToPause" />
+            <Label text="Pick Route" />
+            <Label fx:id="pickRouteMessage" text="${controller.pickRouteOptions}" />
+            <HBox alignment="CENTER" spacing="20.0">
+                <RadioButton fx:id="townRadioButton" text="Take the route through Town" />
+            </HBox>
+            <HBox alignment="CENTER" spacing="20.0">
+                <RadioButton fx:id="shortcutRadioButton" text="Take the shortcut" />
+            </HBox>
+            <Button fx:id="continueButton" text="Continue" onAction="#switchToNextPhase" />
+        </children>
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        </padding>
+    </VBox>
+    <VBox fx:id="popUpBox" visible="false" alignment="CENTER" spacing="20.0" maxHeight="100.0" minWidth="400.0" style=" -fx-background-color:white; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;">
+        <Label fx:id="routeChosenMessage" />
+        <Button fx:id="continueButton2" text="Continue" onAction="#switchToNextPhase" />
+    </VBox>
+    <VBox fx:id="movementPopUpBox" visible="false" alignment="CENTER" spacing="20.0" maxHeight="100.0" minWidth="400.0" style=" -fx-background-color:white; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;">
+        <children>
+            <Label fx:id="movementMessage" />
+            <Button fx:id="continueButton3" text="Continue" onAction="#switchToNextPhase" />
+        </children>
+    </VBox>
+</StackPane>

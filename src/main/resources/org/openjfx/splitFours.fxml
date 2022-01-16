@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.GameScreens.SplitFours">
+    <children>
+        <Button fx:id="pauseButton" onAction="#switchToPause" text="Pause" />
+        <Label text="Split 4's into Options" />
+        <Label fx:id="fourCounterLabel" text="Total 4's:  " />
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <HBox alignment="CENTER" spacing="65.0">
+        <Label text="Hide" />
+        <Label text="Seek Shelter" />
+        <Label text="Backroads" />
+        <Label text="Fight" />
+    </HBox>
+    <HBox alignment="CENTER" spacing="20.0">
+        <Button fx:id="hideMinusButton" onAction="#hideMinus" text="-" />
+        <Label fx:id="hideCount" text="0" />
+        <Button fx:id="hidePlusButton" onAction="#hidePlus" text="+" />
+        <Button fx:id="seekShelterMinusButton" onAction="#seekShelterMinus" text="-" />
+        <Label fx:id="seekShelterCount" text="0" />
+        <Button fx:id="seekShelterPlusButton" onAction="#seekShelterPlus" text="+" />
+        <Button fx:id="backroadsMinusButton" onAction="#backroadsMinus" text="-" />
+        <Label fx:id="backroadsCount" text="0" />
+        <Button fx:id="backroadsPlusButton" onAction="#backroadsPlus" text="+" />
+        <Button fx:id="fightMinusButton" onAction="#fightMinus" text="-" />
+        <Label fx:id="fightCount" text="0" />
+        <Button fx:id="fightPlusButton" onAction="#fightPlus" text="+" />
+    </HBox>
+    <children>
+        <Button fx:id="continueButton" onAction="#switchToResolveDice" text="Continue" />
+    </children>
+</VBox>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.GameScreens.Town">
+    <VBox alignment="CENTER" spacing="20.0">
+        <children>
+            <Button fx:id="pauseButton" text="Pause" onAction="#switchToPause" />
+            <Label text="${controller.townName}" />
+            <HBox alignment="CENTER" spacing="20.0">
+                <Button prefWidth="100" fx:id="shopButton" text="Shop" onAction="#switchToShop" />
+                <Button prefWidth="100" fx:id="pokerButton" text="Play Poker" onAction="#switchToPoker" />
+            </HBox>
+            <Button prefWidth="220" fx:id="leaveButton" text="Leave Town" onAction="#leaveTown" />
+        </children>
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        </padding>
+    </VBox>
+    <VBox fx:id="confirmBox" visible="false" alignment="CENTER" spacing="20.0" maxHeight="100.0" minWidth="400.0" style=" -fx-background-color:white; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;">
+        <children>
+            <Label fx:id="confirmMessage" text="Are you sure you want to leave the Town?"/>
+            <HBox alignment="CENTER" spacing="40.0" >
+                <Button fx:id="quitYesButton" text="Yes" onAction="#confirmLeave" />
+                <Button fx:id="quitNoButton" text="No" onAction="#returnToTown" />
+            </HBox>
+        </children>
+    </VBox>
+</StackPane>

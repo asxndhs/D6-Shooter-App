@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.HighScoreScreens.Stats">
+    <children>
+        <Label text="Stats" />
+        <Button fx:id="menuButton" text="Back to Main Menu" onAction="#switchToMenu" />
+        <Button fx:id="highScoresButton" text="Back to High Scores" onAction="#switchToHighScores" />
+        <ScrollPane fx:id="statsPane" prefHeight="480" fitToWidth="true">
+            <content>
+                <VBox fx:id="historicStats" alignment="CENTER" spacing="20">
+                    <children>
+                        <Label text="All Time Stats">
+                            <font>
+                                <Font size="18" />
+                            </font>
+                        </Label>
+                        <Label fx:id="gamesPlayed"/>
+                        <Label fx:id="gameWins"/>
+                        <Label fx:id="gameLosses"/>
+                        <Label fx:id="gamesAbandoned"/>
+                        <Label fx:id="winPercentage"/>
+                        <Label fx:id="daysPlayed"/>
+                        <Label fx:id="turnsHistoric"/>
+                        <Label fx:id="gameTimerHistoric"/>
+                        <Label fx:id="spacesTravelledHistoric"/>
+                        <Label fx:id="posseMembersLostHistoric"/>
+                        <Label fx:id="goldSpentHistoric"/>
+                        <Label fx:id="rationsHandedOutHistoric"/>
+                        <Label fx:id="ammoUsedHistoric"/>
+                        <Label fx:id="specialItemsBoughtHistoric"/>
+                        <Label fx:id="townsVisitedHistoric"/>
+                        <Label fx:id="eventsStartedHistoric"/>
+                        <Label fx:id="specialEventsStartedHistoric"/>
+                        <Label text="Poker">
+                            <font>
+                                <Font size="16" />
+                            </font>
+                        </Label>
+                        <Label fx:id="pokerGamesHistoric"/>
+                        <Label fx:id="pokerWinsHistoric"/>
+                        <Label fx:id="pokerTiesHistoric"/>
+                        <Label fx:id="pokerLossesHistoric"/>
+                        <Label fx:id="wagerWinningsHistoric"/>
+                        <Label fx:id="wagerLossesHistoric"/>
+                        <Label fx:id="bestPokerHandHistoric"/>
+                        <Label text="Shootouts">
+                            <font>
+                                <Font size="16" />
+                            </font>
+                        </Label>
+                        <Label fx:id="shootoutsStartedHistoric"/>
+                        <Label fx:id="shootoutsWonHistoric"/>
+                        <Label fx:id="shootoutsLostHistoric"/>
+                        <Label text="Single Game Best Stats">
+                            <font>
+                                <Font size="18" />
+                            </font>
+                        </Label>
+                        <Label fx:id="daysPlayedBest"/>
+                        <Label fx:id="turnsBest"/>
+                        <Label fx:id="gameTimerBest"/>
+                        <Label fx:id="spacesTravelledBest"/>
+                        <Label fx:id="finishingPosseBest"/>
+                        <Label fx:id="finishingGoldBest"/>
+                        <Label fx:id="finishingFoodBest"/>
+                        <Label fx:id="finishingAmmoBest"/>
+                        <Label fx:id="posseMembersLostBest"/>
+                        <Label fx:id="goldSpentBest"/>
+                        <Label fx:id="rationsHandedOutBest"/>
+                        <Label fx:id="ammoUsedBest"/>
+                        <Label fx:id="specialItemsBoughtBest"/>
+                        <Label text="Poker">
+                            <font>
+                                <Font size="16" />
+                            </font>
+                        </Label>
+                        <Label fx:id="pokerWinsBest"/>
+                        <Label fx:id="pokerTiesBest"/>
+                        <Label fx:id="pokerLossesBest"/>
+                        <Label fx:id="wagerWinningsBest"/>
+                        <Label fx:id="wagerLossesBest"/>
+                        <Label text="Shootouts">
+                            <font>
+                                <Font size="16" />
+                            </font>
+                        </Label>
+                        <Label fx:id="shootoutsStartedBest"/>
+                        <Label fx:id="shootoutsWonBest"/>
+                        <Label fx:id="shootoutsLostBest"/>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>

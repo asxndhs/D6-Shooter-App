@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.SettingsScreens.Audio">
+    <children>
+        <Label text="Audio Settings" />
+        <Button fx:id="menuButton" text="Back" onAction="#switchBack" />
+        <HBox alignment="CENTER" spacing="20">
+            <Label text="Music:"/>
+            <RadioButton fx:id="musicOnRadioButton" text="On"/>
+            <RadioButton fx:id="musicOffRadioButton" text="Off"/>
+        </HBox>
+        <HBox alignment="CENTER" spacing="20">
+            <Label text="Sound Effects:"/>
+            <RadioButton fx:id="soundEffectsOnRadioButton" text="On"/>
+            <RadioButton fx:id="soundEffectsOffRadioButton" text="Off"/>
+        </HBox>
+        <HBox alignment="CENTER" spacing="20">
+            <Label text="Master Volume:"/>
+            <Slider fx:id="masterVolumeSlider" prefWidth="400" value="100" showTickLabels="true" snapToTicks="true" majorTickUnit="10" minorTickCount="9" showTickMarks="true"/>
+            <Label fx:id="masterVolumeSliderLabel" text="100"/>
+        </HBox>
+        <HBox alignment="CENTER" spacing="20">
+            <Button text="Save &amp; Close" onAction="#saveAndClose"/>
+            <Button text="Reset to Default Settings" onAction="#resetToDefaults"/>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.text.Font?>
+<StackPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.GameScreens.GameOver">
+    <VBox alignment="CENTER" spacing="20.0">
+        <children>
+            <Label text="Game Over" />
+            <Label fx:id="endGameMessage" text="${controller.gameOverMessage}" />
+            <VBox visible="false" fx:id="gameStats" alignment="CENTER" spacing="20.0">
+                <ScrollPane fx:id="statsPane" prefHeight="480" fitToWidth="true">
+                    <content>
+                        <VBox fx:id="historicStats" alignment="CENTER" spacing="20">
+                            <children>
+                                <Label text="Game Stats">
+                                    <font>
+                                        <Font size="18" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="finalDay"/>
+                                <Label fx:id="finalSpace"/>
+                                <Label fx:id="spacesTravelled"/>
+                                <Label fx:id="turns"/>
+                                <Label fx:id="gameTimer"/>
+                                <Label fx:id="finalPosse"/>
+                                <Label fx:id="finalGold"/>
+                                <Label fx:id="finalFood"/>
+                                <Label fx:id="finalAmmo"/>
+                                <Label fx:id="posseMembersLost"/>
+                                <Label fx:id="goldSpent"/>
+                                <Label fx:id="rationsHandedOut"/>
+                                <Label fx:id="ammoUsed"/>
+                                <Label fx:id="specialItemsBought"/>
+                                <Label fx:id="townsVisited"/>
+                                <Label fx:id="eventsStarted"/>
+                                <Label text="Poker">
+                                    <font>
+                                        <Font size="16" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="pokerGames"/>
+                                <Label fx:id="pokerWins"/>
+                                <Label fx:id="pokerTies"/>
+                                <Label fx:id="pokerLosses"/>
+                                <Label fx:id="wagerWinnings"/>
+                                <Label fx:id="wagerLosses"/>
+                                <Label fx:id="bestPokerHand"/>
+                                <Label text="Shootouts">
+                                    <font>
+                                        <Font size="16" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="shootoutsStarted"/>
+                                <Label fx:id="shootoutsWon"/>
+                                <Label fx:id="shootoutsLost"/>
+                                <Label fx:id="bestShootoutScore"/>
+                            </children>
+                        </VBox>
+                    </content>
+                </ScrollPane>
+            </VBox>
+            <Button fx:id="continueButton1" onAction="#switchToNextPhase" text="Show Game Stats" />
+        </children>
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        </padding>
+    </VBox>
+    <VBox fx:id="scorePopUpBox" alignment="CENTER" maxHeight="100.0" minWidth="400.0" spacing="20.0" style=" -fx-background-color:white; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;" visible="false">
+        <Label text="Scoring" />
+        <Label fx:id="scoreMessage" />
+        <Label fx:id="renoScore" />
+        <Label fx:id="daysScore" />
+        <Label fx:id="posseScore" />
+        <Label fx:id="goldScore" />
+        <Label fx:id="foodScore" />
+        <Label fx:id="ammoScore" />
+        <Label fx:id="finalScore" />
+        <Button fx:id="continueButton2" onAction="#switchToNextPhase" text="Continue" />
+    </VBox>
+    <VBox fx:id="initialsPopUpBox" alignment="CENTER" maxHeight="100.0" minWidth="400.0" spacing="20.0" style=" -fx-background-color:white; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;" visible="false">
+        <children>
+            <Label fx:id="scorePlacementMessage" text="You placed in the top 5! Enter your initials below" />
+            <TextField fx:id="inputInitials" alignment="CENTER" maxWidth="150" promptText="Enter your initials" />
+            <Button fx:id="submitButton" onAction="#continueToScores" text="Submit" />
+        </children>
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        </padding>
+    </VBox>
+    <VBox fx:id="highScoresPopUpBox" alignment="CENTER" maxHeight="400" minWidth="400.0" spacing="20.0" style=" -fx-background-color:white; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;" visible="false">
+        <TableView fx:id="highScoreLeaderboard" maxWidth="260" maxHeight="260" >
+            <columns>
+                <TableColumn fx:id="positionLeaderboardColumn" prefWidth="50"/>
+                <TableColumn fx:id="initialsLeaderboardColumn" prefWidth="100"/>
+                <TableColumn fx:id="scoreLeaderboardColumn" prefWidth="100"/>
+            </columns>
+        </TableView>
+        <Button fx:id="continueButton3" onAction="#switchToNextPhase" text="Continue" />
+    </VBox>
+</StackPane>

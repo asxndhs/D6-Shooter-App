@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.HBox?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.GameScreens.Poker">
+    <VBox alignment="CENTER" spacing="20.0">
+        <children>
+            <Button fx:id="pauseButton" text="Pause" onAction="#switchToPause" />
+            <Label text="Poker" />
+            <HBox alignment="CENTER" spacing="50.0">
+                <Button fx:id="quitPokerButton" text="Quit Poker" onAction="#quitPoker" />
+                <Button fx:id="wagerButton" text="Set Wager" onAction="#setWagerPopUp" />
+                <Button fx:id="rollButton" text="Roll Hand" onAction="#rollPokerCards" />
+                <Button fx:id="handsButton" text="Poker Hands" onAction="#pokerHands" />
+            </HBox>
+            <Label fx:id="pokerMessage" text="Set wager to begin the game" />
+            <HBox fx:id="pokerHandBox" alignment="CENTER" spacing="20.0" visible="false">
+                <Button fx:id="pokerCard1Button" onAction="#lockUnlockCard1"/>
+                <Button fx:id="pokerCard2Button" onAction="#lockUnlockCard2"/>
+                <Button fx:id="pokerCard3Button" onAction="#lockUnlockCard3"/>
+                <Button fx:id="pokerCard4Button" onAction="#lockUnlockCard4"/>
+                <Button fx:id="pokerCard5Button" onAction="#lockUnlockCard5"/>
+            </HBox>
+            <Label fx:id="playersHandMessage" />
+            <Button fx:id="revealHandButton" text="See hand to beat" visible="false" onAction="#showHandToBeat"/>
+            <HBox fx:id="opponentHandBox" alignment="CENTER" spacing="20.0" >
+                <Label fx:id="handToBeat" />
+            </HBox>
+            <Button fx:id="continueButton" text="Continue" onAction="#seeResult" visible="false"/>
+        </children>
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        </padding>
+    </VBox>
+    <VBox fx:id="wagerBox" visible="false" alignment="CENTER" spacing="20.0" maxHeight="100.0" minWidth="400.0" style=" -fx-background-color:white; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;">
+        <children>
+            <Label fx:id="wagerMessage" text="Use the sliders to set your wager. NOTE: Your winnings will be capped to the max inventory of 12 Food and 5 Ammo"/>
+            <VBox fx:id="sliderBox" alignment="CENTER" spacing="40.0">
+                <HBox alignment="CENTER" spacing="40.0" >
+                    <Button fx:id="setWagerButton" text="Set Wager" onAction="#setWager" />
+                    <Button fx:id="closeWagerButton" text="Close" onAction="#closeWager" />
+                </HBox>
+            </VBox>
+        </children>
+    </VBox>
+    <VBox fx:id="resultBox" visible="false" alignment="CENTER" spacing="20.0" maxHeight="100.0" minWidth="400.0" style=" -fx-background-color:white; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;">
+        <children>
+            <Label fx:id="resultMessage" />
+            <Button fx:id="continueButton2" text="Return to Town" onAction="#switchToTown" />
+        </children>
+    </VBox>
+    <VBox fx:id="quitBox" visible="false" alignment="CENTER" spacing="20.0" maxHeight="100.0" minWidth="400.0" style=" -fx-background-color:white; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;">
+        <children>
+            <Label fx:id="quitMessage" text="Are you sure you want to quit the Poker game? You will not be able to play again this turn"/>
+            <HBox alignment="CENTER" spacing="40.0" >
+                <Button fx:id="quitYesButton" text="Yes" onAction="#switchToTown" />
+                <Button fx:id="quitNoButton" text="No" onAction="#returnToPoker" />
+            </HBox>
+        </children>
+    </VBox>
+</StackPane>
